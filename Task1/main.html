@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Navigation Bar</title>
+</head>
+<body>
+    <nav class="Nav-bar">
+        <ul class="Nav-bar-list">
+            <li class="Nav-bar-element">
+                <a href="#" onclick="addElement()">home <i class="fas fa-caret-down"></i></a>
+            </li>
+
+            <li class="Nav-bar-element">
+                <a href="#" onclick="removeElement()">about us <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="#" onclick="removeElement()">how we can help you</a></li>
+                        <li>our work</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="Nav-bar-element">
+                <a href="#" onclick="Faq()">Faq <i class="fas fa-caret-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="homet">
+        <h1 id="103">Hello friend and welcome to my <br>Website</h1>
+    </div>
+
+    <div class="image-container">
+        <img id="image" class="im" src="static/7Xk-unscreen.gif" alt="w">
+    </div>
+
+    <div id="104" class="project-row teal w-clearfix">
+        <a href="/project-page" id = "108" class="project-link project-9 third-width w-inline-block">
+            <div class="project-wrapper">
+                <h3>People</h3>
+                <div class="tag">Website</div>
+            </div></a>
+            <a href="/project-page" id = "109" class="project-link project-10 third-width w-inline-block">
+                <div class="project-wrapper">
+                    <h3>Beach</h3>
+                    <div class="tag">Graphic</div>
+                </div></a>
+                <a href="/project-page" id ="105" class="project-link project-8 third-width w-inline-block"><div class="project-wrapper"><h3>Lake</h3><div class="tag">Website</div></div></a>
+                <a href="/project-page" id ="106" class="project-link project-1 half-width w-inline-block"><div class="project-wrapper"><h3>Raybans</h3><div class="tag">Website</div></div></a>
+                <a href="/project-page" id ="107" class="project-link project-2 half-width w-inline-block"><div class="project-wrapper"><h3>Raybans</h3><div class="tag">Website</div></div></a>
+    </div> 
+
+
+    <div class="about us card" data-aos="fade-up"data-aos-duration="1000">
+        <h3 class="about-t" id="101">What is <br>ower <br>work !</h3>
+        <p class="about p" id="102">we are dedicated to transforming ideas into innovative solutions. Founded with a passion for excellence, our team of skilled professionals brings years of experience and a commitment to quality to every project we undertake. We pride ourselves on delivering exceptional results through a combination of creative thinking and meticulous attention to detail. Our mission is to provide top-notch services that exceed client expectations and foster long-term relationships. Whether you're looking for cutting-edge technology, unique design, or strategic guidance, we are here to turn your vision into reality. Join us on our journey as we continue to push boundaries and drive success in every endeavor.</p>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+
+        //sagamha later hadi ##########################
+        AOS.init({
+            duration: 1000, // Duration of the animation
+        });
+
+
+        let removedElementHTML = ''; 
+        document.getElementById('101').style.display = 'none';
+        document.getElementById('102').style.display = 'none';
+        document.getElementById('104').style.display = 'none';
+
+        function removeElement() {
+            const imageContainer = document.getElementById('image-container');
+            const image = document.getElementById('image'); 
+            document.getElementById('101').style.display = 'block';
+            document.getElementById('102').style.display = 'block';
+            document.getElementById('103').style.display = 'none';
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('104').style.display = 'none';
+
+            
+        }
+
+        function addElement() {
+            const imageContainer = document.getElementById('image-container');
+            document.getElementById('101').style.display = 'none';
+            document.getElementById('102').style.display = 'none';
+            document.getElementById('103').style.display = 'block';
+            document.getElementById('image').style.display = 'block';
+            document.getElementById('105').style.display = 'none';
+            document.getElementById('106').style.display = 'none';
+            document.getElementById('107').style.display = 'none';
+            document.getElementById('108').style.display = 'none';
+            document.getElementById('109').style.display = 'none';
+
+        }
+
+        function Faq() {
+            document.getElementById('101').style.display = 'none';
+            document.getElementById('102').style.display = 'none';
+            document.getElementById('103').style.display = 'none';
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('104').style.display = 'block';
+            document.getElementById('105').style.display = 'block';
+            document.getElementById('106').style.display = 'block';
+            document.getElementById('107').style.display = 'block';
+            document.getElementById('108').style.display = 'block';
+            document.getElementById('109').style.display = 'block';
+
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
